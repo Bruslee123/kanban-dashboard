@@ -55,6 +55,8 @@ pipeline {
                     docker run -d \
                     --restart unless-stopped \
                     --name kanban-dashboard \
+                    --memory="512m" \
+                    --cpus="0.5" \
                     -p 80:8080 \
                     ${DOCKER_IMAGE}:latest
                 '''
